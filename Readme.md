@@ -7,20 +7,20 @@ This project demonstrates the process of building a Data Engineering pipeline in
 **Data Ingestion:** Extracts raw data from an external HTTPS URL using Azure Data Factory and stores it in Azure Data Lake Gen2 (Bronze container). \
 **Data Transformation:** Transforms raw data in Azure Databricks and stores the transformed data in the Silver container in Parquet format. \
 **Data Aggregation:** Aggregates and refines the data, storing the final, curated dataset in the Gold container in Delta table format. \
-**Data Visualization:** Connects the curated data in the Gold container to Power BI Desktop for reporting and visualization. \
+**Data Visualization:** Connects the curated data in the Gold container to Power BI Desktop for reporting and visualization. 
 
 ## Architecture:
-**1. Data Ingestion** (Bronze Container) 
-* Azure Data Factory (ADF) is used to create a dynamic pipeline that extracts raw Parquet data from an external HTTPS URL.
-* The extracted data is then copied into the Azure Data Lake Gen2 Bronze container for raw storage.
-**2. Data Transformation** (Silver Container) 
-* Azure Databricks is used to process and transform the raw data stored in the Bronze container.
-* Data transformation involves data cleaning, filtering, and enriching the raw dataset.
-* The transformed data is saved in Parquet format in the Silver container.
-**3. Data Aggregation and Refinement** (Gold Container) 
-* The transformed data from the Silver container is further aggregated and refined to meet business requirements.
-* The final curated dataset is stored in the Gold container in Delta table format, allowing for ACID transactions, versioning, and fast querying.
-**4. Data Visualization**
+**1. Data Ingestion** (Bronze Container) \
+* Azure Data Factory (ADF) is used to create a dynamic pipeline that extracts raw Parquet data from an external HTTPS URL. \
+* The extracted data is then copied into the Azure Data Lake Gen2 Bronze container for raw storage. \
+**2. Data Transformation** (Silver Container) \
+* Azure Databricks is used to process and transform the raw data stored in the Bronze container. \
+* Data transformation involves data cleaning, filtering, and enriching the raw dataset. \
+* The transformed data is saved in Parquet format in the Silver container. \
+**3. Data Aggregation and Refinement** (Gold Container) \
+* The transformed data from the Silver container is further aggregated and refined to meet business requirements. \
+* The final curated dataset is stored in the Gold container in Delta table format, allowing for ACID transactions, versioning, and fast querying. \
+**4. Data Visualization** \
 * The data stored in the Gold container is connected to Power BI Desktop for data analysis, reporting, and visualization. This enables stakeholders to generate interactive dashboards and insights from the curated dataset.
 
 ## Technology Stack: 
