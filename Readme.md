@@ -12,7 +12,7 @@ This project demonstrates the process of building a Data Engineering pipeline in
 ## Architecture:
 **1. Data Ingestion** (Bronze Container) 
 * Azure Data Factory (ADF) is used to create a dynamic pipeline that extracts raw Parquet data from an external HTTPS URL. 
-* The extracted data is then copied into the Azure Data Lake Gen2 Bronze container for raw storage.\ 
+* The extracted data is then copied into the Azure Data Lake Gen2 Bronze container for raw storage.
 **2. Data Transformation** (Silver Container) 
 * Azure Databricks is used to process and transform the raw data stored in the Bronze container. 
 * Data transformation involves data cleaning, filtering, and enriching the raw dataset. 
